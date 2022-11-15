@@ -22,3 +22,5 @@ To move back into previous folder use the following command:
 right click on folder and can open in integrated terminal. adds everything into your challeneges file. 
 
 To see hidden code `ls -a ` or `ls -la`
+
+to open vs code: code .
