@@ -2,6 +2,7 @@ body {
   background: url("https://bostonglobe-prod.cdn.arcpublishing.com/resizer/MIwXCEqUwcNl54xRN7nmaRkOUn4=/1440x0/cloudfront-us-east-1.images.arcpublishing.com/bostonglobe/66LUJA7EKIYKB4CPEWV5YK2QBU.jpg");
   background-size: cover;
   text-align: center;
+  margin: 0; padding:0;
 }
 
 h1 {
@@ -23,40 +24,55 @@ span {
   padding: 0px 15px;
 }
 button {
-  width: 300px;
-  height: 50px;
+  width: 20vw;
+  height: 4vw;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 1.5em;
+  font-size: 2vw;
   background-color: rgba(87, 219, 254, .8);
   margin: 10px 10px;
+ 
 }
 
-footer {
-  position: absolute;
-  text-align: center;
-  left: 15%;
-  /* top:10px; */
-  bottom: 5px;
-  width: 70%;
-  height: 60px; /* Height of the footer */
-  background: rgba(139, 33, 100, 0.7);
-  font-size: 2.5em;
-  color: rgb(145, 228, 254);
+#page-container {
+  position: relative;
+  min-height: 100vh;
 }
+
+#content-wrap {
+  margin:auto;
+  padding-bottom: 3rem;    /* Footer height */
+} 
+
+h5{text-align: center;
+margin-bottom: 0;
+padding-top: 1.5rem;
+font-size:1.5em;
+color:rgb(87, 219, 254);}
+
+footer span{ background-color: rgba(139, 33, 100, 0.7);
+padding-left: 40vw;
+padding-right: 40vw;
+padding:1vw 40vw;
+
+}
+
+
+
 .board {
   display: grid;
   grid-gap: 10px 10px;
-  height: 90vh;
   margin: 2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns:repeat(6, 1fr); 
+  /* can do this rather than 1fr, 1fr over and over */
+  width:70vw;
   height: 50vh;
-  max-width: 70%;
+  /* max-width: 70%; */
   margin: 0 auto;
 }
 .box {
-  font-size: 3rem;
+  font-size: 2vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,33 +82,37 @@ footer {
   font-weight: bold;
 }
 .round {
-  font-size: 7rem;
+  font-size: 5rem;
 }
 #input {
-  font-size: 14pt;
-  width: 300px;
-  height: 40px;
-  margin-top: -20px;
-  margin-bottom: 5px;
+  font-size: 2vw;
+  width: 18vw;
+  height: 3vw;
+margin-bottom: 5px;  
 }
 
 .box:hover {
   color: red;
-  font-size: 4rem;
+  font-size: 5vh;
 }
 
 p {
   display: inline;
   color: yellow;
-  margin: 0px 200px;
-  font-size: 1.53em;
+  margin: 5vw 5vw;
+  font-size: 2vw;
   font-weight: bold;
 }
+
 /* If they want Next round button to the right activate code below if want button centered deactivate */
 button.right {
   float: right;
-  margin-right: 9%;
+  margin-right: 5vw;
+  margin-top: 5px;
 }
+button.play{margin-top: 30px;}
+
+
 
 @keyframes colorchange {
   from {
@@ -102,3 +122,13 @@ button.right {
     color: fuchsia;
   }
 }
+
+   @media (max-width: 1000px) { 
+       h1 {
+        font-size: 22px;
+   }
+   h2{
+     font-size:18px;
+   }
+   
+} 
