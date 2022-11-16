@@ -1,0 +1,104 @@
+body {
+  background: url("https://bostonglobe-prod.cdn.arcpublishing.com/resizer/MIwXCEqUwcNl54xRN7nmaRkOUn4=/1440x0/cloudfront-us-east-1.images.arcpublishing.com/bostonglobe/66LUJA7EKIYKB4CPEWV5YK2QBU.jpg");
+  background-size: cover;
+  text-align: center;
+}
+
+h1 {
+  font-size: 8em;
+  color: white;
+  text-align: center;
+  margin: 20px;
+  animation-name: colorchange;
+  animation-duration: 5s;
+}
+h3 {
+  font-size: 3em;
+  color: white;
+  text-align: center;
+  margin: 10px;
+}
+span {
+  background: rgba(5, 53, 166, 0.5);
+  padding: 0px 15px;
+}
+button {
+  width: 300px;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  background-color: rgba(87, 219, 254, .8);
+  margin: 10px 10px;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  left: 15%;
+  /* top:10px; */
+  bottom: 5px;
+  width: 70%;
+  height: 60px; /* Height of the footer */
+  background: rgba(139, 33, 100, 0.7);
+  font-size: 2.5em;
+  color: rgb(145, 228, 254);
+}
+.board {
+  display: grid;
+  grid-gap: 10px 10px;
+  height: 90vh;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: 50vh;
+  max-width: 70%;
+  margin: 0 auto;
+}
+.box {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 4rem; */
+  background-color:rgba(0,0,255, .95);
+  color: Yellow;
+  font-weight: bold;
+}
+.round {
+  font-size: 7rem;
+}
+#input {
+  font-size: 14pt;
+  width: 300px;
+  height: 40px;
+  margin-top: -20px;
+  margin-bottom: 5px;
+}
+
+.box:hover {
+  color: red;
+  font-size: 4rem;
+}
+
+p {
+  display: inline;
+  color: yellow;
+  margin: 0px 200px;
+  font-size: 1.53em;
+  font-weight: bold;
+}
+/* If they want Next round button to the right activate code below if want button centered deactivate */
+button.right {
+  float: right;
+  margin-right: 9%;
+}
+
+@keyframes colorchange {
+  from {
+    color: white;
+  }
+  to {
+    color: fuchsia;
+  }
+}
