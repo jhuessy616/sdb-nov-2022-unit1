@@ -1,39 +1,47 @@
+/* Setting a background image that is centered and covers entire page. */
 body {
   background: url("https://bostonglobe-prod.cdn.arcpublishing.com/resizer/MIwXCEqUwcNl54xRN7nmaRkOUn4=/1440x0/cloudfront-us-east-1.images.arcpublishing.com/bostonglobe/66LUJA7EKIYKB4CPEWV5YK2QBU.jpg");
   background-size: cover;
   text-align: center;
   margin: 0; padding:0;
 }
-
+/* h1 and h3 styling and also adding animation for color change to occuron h1  */
 h1 {
   font-size: 8em;
   color: white;
   text-align: center;
-  margin: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   animation-name: colorchange;
   animation-duration: 5s;
 }
+
 h3 {
-  font-size: 3em;
+  text-decoration: underline;
+  font-size: 5vw;
   color: white;
   text-align: center;
-  margin: 10px;
+  margin-top:0;
+  margin-bottom: 2px;
 }
+
+/* background color around text to make text pop without taking uo entire screen width */
 span {
   background: rgba(5, 53, 166, 0.5);
   padding: 0px 15px;
 }
+/* button design */
 button {
-  width: 20vw;
+  width: 15vw;
   height: 4vw;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 2vw;
+  font-size: 1.5vw;
   background-color: rgba(87, 219, 254, .8);
   margin: 10px 10px;
- 
 }
 
+/* creating soacing for footer below content set the container to fit the screen */
 #page-container {
   position: relative;
   min-height: 100vh;
@@ -44,32 +52,31 @@ button {
   padding-bottom: 3rem;    /* Footer height */
 } 
 
+/* this is the footer text in an h5 */
 h5{text-align: center;
-margin-bottom: 0;
+margin-bottom: 0px;
 padding-top: 1.5rem;
-font-size:1.5em;
-color:rgb(87, 219, 254);}
+font-size:2vw;
+color:rgb(87, 219, 254);
+}
 
+/* footer background color */
 footer span{ background-color: rgba(139, 33, 100, 0.7);
-padding-left: 40vw;
-padding-right: 40vw;
-padding:1vw 40vw;
-
+padding:1vw 30vw;
 }
 
 
 
 .board {
   display: grid;
-  grid-gap: 10px 10px;
-  margin: 2rem;
-  display: grid;
+  grid-gap: .5vw;
+  
   grid-template-columns:repeat(6, 1fr); 
   /* can do this rather than 1fr, 1fr over and over */
-  width:70vw;
+  width:80vw;
   height: 50vh;
   /* max-width: 70%; */
-  margin: 0 auto;
+  margin: 0 auto 5px auto;
 }
 .box {
   font-size: 2vw;
@@ -80,17 +87,24 @@ padding:1vw 40vw;
   background-color:rgba(0,0,255, .95);
   color: Yellow;
   font-weight: bold;
+    border-width: 1vw;
+            border-style: groove;
+            Border-color: blue;
 }
+/* want my h1 to have the same properties as title page but just a little bit smaller */
 .round {
-  font-size: 5rem;
+  font-size: 8vw; 
 }
-#input {
-  font-size: 2vw;
+/* sizing the input button so it scales with screen size */
+input {
+  font-size: 1.5vw;
   width: 18vw;
   height: 3vw;
-margin-bottom: 5px;  
+margin-bottom: 2vw; 
+margin-top: 2vw; 
 }
 
+/* color change and zoom animation with hover over categories */
 .box:hover {
   color: red;
   font-size: 5vh;
@@ -99,7 +113,7 @@ margin-bottom: 5px;
 p {
   display: inline;
   color: yellow;
-  margin: 5vw 5vw;
+  margin: 3vw 3vw;
   font-size: 2vw;
   font-weight: bold;
 }
@@ -108,12 +122,14 @@ p {
 button.right {
   float: right;
   margin-right: 5vw;
-  margin-top: 5px;
+  margin-top: .75vw;
 }
+/* changing margins of button on home oage to have better spacing */
 button.play{margin-top: 30px;}
 
+/* ADD DIV SO THAT BUTTONS AND SCORE STAY IN ONE LINE. EDIT THIS */
 
-
+/* animation color styling */
 @keyframes colorchange {
   from {
     color: white;
@@ -123,6 +139,7 @@ button.play{margin-top: 30px;}
   }
 }
 
+/* changing to fit screen
    @media (max-width: 1000px) { 
        h1 {
         font-size: 22px;
@@ -131,4 +148,4 @@ button.play{margin-top: 30px;}
      font-size:18px;
    }
    
-} 
+}  */
