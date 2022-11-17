@@ -4,10 +4,15 @@
   --secondary: white;
   color: var(--secondary);
 }
+h1, h2, h3{
+  font-family: "Antonio", sans-serif;
+}
+h2{font-size: 45px;}
+h3{font-size: 25px;}
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:1fr 1fr;
   align-items: center;
   margin: 2.5rem 3.5rem;
 }
@@ -17,19 +22,61 @@
 }
 
 .headertext {
-  font-size: 6.5rem;
+  font-size:6.5rem;
   text-transform: uppercase;
   text-align: right;
-  line-height: 1rem;
+  line-height: 2rem;
 }
 
-h1 {
-  font-family: "Arvo", serif;
-}
+
 .headertext:nth-child(1) {
   color: var(--primary);
 }
 .headertextgroup {
   margin-left: auto;
   padding: 4.5rem;
+}
+
+.btn-primary{
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+.btn-primary:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.btn-lg
+{font-size:20px;
+padding:1.5em;}
+
+.btn{font-size: 18px;
+padding:1em;
+}
+
+.btn-100{
+  min-width: 100%;
+}
+
+/* Products */
+.wrapper-food-display{display:grid;
+/* grid-template-columns:1fr 1fr 1fr; */
+grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+gap: 1.5rem;
+align-items:center;
+}
+.food-display{ padding:2rem;
+}
+.food-display > img{
+  min-width: 400px;
+  width:100%;
+}
+/* to adjust to screen size adjustments */
+@media screen and (max-width: 927) {
+  .wrapper {grid-template-columns: 1fr;}
+}
+.headertextgroup{
+  /* margin-left: 0; */
+  padding:4.5rem;
+  text-align: center;
 }
