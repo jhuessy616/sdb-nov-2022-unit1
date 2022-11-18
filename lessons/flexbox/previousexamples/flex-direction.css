@@ -1,0 +1,14 @@
+.container{
+    border:5px solid #ffcc5c;
+    display:flex;
+    /* flex-direction: column; */
+}
+/* force a collapse by using flex.  */
+
+@media screen amd (max-width:970px;){
+    .container {
+        flex-direction:column;
+    }
+}
+
+/* flexbox has axis it is defualted t row and can be switched to column */

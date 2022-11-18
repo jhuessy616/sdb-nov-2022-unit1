@@ -1,13 +1,24 @@
 /* Setting a background image that is centered and covers entire page. */
+/* @font-face {
+  font-family: "gyparodyregular";
+  src: url("gyparody-webfont.woff2") format("woff2"),
+    url("gyparody-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+} */
+/* !Trying to get the jeopardy font */
+
 body {
   background: url("https://bostonglobe-prod.cdn.arcpublishing.com/resizer/MIwXCEqUwcNl54xRN7nmaRkOUn4=/1440x0/cloudfront-us-east-1.images.arcpublishing.com/bostonglobe/66LUJA7EKIYKB4CPEWV5YK2QBU.jpg");
   background-size: cover;
   text-align: center;
-  margin: 0; padding:0;
+  margin: 0;
+  padding: 0;
 }
 /* h1 and h3 styling and also adding animation for color change to occuron h1  */
 h1 {
-  font-size: 8em;
+ /* font-family: "gyparodyregular", serif;  */
+  font-size: 9vw;
   color: white;
   text-align: center;
   margin-top: 10px;
@@ -21,7 +32,7 @@ h3 {
   font-size: 5vw;
   color: white;
   text-align: center;
-  margin-top:0;
+  margin-top: 0;
   margin-bottom: 2px;
 }
 
@@ -34,76 +45,88 @@ span {
 button {
   width: 15vw;
   height: 4vw;
-  margin-top: 20px;
-  margin-bottom: 20px;
   font-size: 1.5vw;
-  background-color: rgba(87, 219, 254, .8);
-  margin: 10px 10px;
+  background-color: rgba(87, 219, 254, 0.8);
+  margin: 10px;
 }
 
-/* creating soacing for footer below content set the container to fit the screen */
+/* creating spacing for footer below content set the container to fit the screen */
 #page-container {
-  position: relative;
+  /* position: relative; */
   min-height: 100vh;
 }
 
 #content-wrap {
-  margin:auto;
-  padding-bottom: 3rem;    /* Footer height */
-} 
+  margin: auto;
+  padding-bottom: 3rem; 
+}
 
 /* this is the footer text in an h5 */
-h5{text-align: center;
-margin-bottom: 0px;
-padding-top: 1.5rem;
-font-size:2vw;
-color:rgb(87, 219, 254);
+h5 {
+  text-align: center;
+  margin-bottom: 0;
+  padding-top: 1.5rem;
+  font-size: 2vw;
+  color: rgb(87, 219, 254);
+  
 }
+
 
 /* footer background color */
-footer span{ background-color: rgba(139, 33, 100, 0.7);
-padding:1vw 30vw;
+.footer span {
+  background-color: rgba(139, 33, 100, 0.7);
+  padding: 1vw 30vw;
 }
 
-
-
 .board {
-  display: grid;
-  grid-gap: .5vw;
   
-  grid-template-columns:repeat(6, 1fr); 
+  display: grid;
+  grid-gap: 0.5vw;
+  grid-template-columns: repeat(6, 1fr);
+  /* grid-template-rows: repeat(6,1fr); */
   /* can do this rather than 1fr, 1fr over and over */
-  width:80vw;
-  height: 50vh;
+  width: 80vw;
+ height: 50vh;
+    padding: 1vw; 
+    
   /* max-width: 70%; */
-  margin: 0 auto 5px auto;
+  margin: 10px auto;
+  /* padding: .1px; */
+  /* padding-bottom: 1vh; */
+
+  
 }
 .box {
   font-size: 2vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: 4rem; */
-  background-color:rgba(0,0,255, .95);
+  /* padding: 2vw 2vw; */
+  background-color: rgba(0, 0, 255, 0.95);
   color: Yellow;
   font-weight: bold;
-    border-width: 1vw;
-            border-style: groove;
-            Border-color: blue;
+  border-width: 1vw;
+  border-style: groove;
+  border-color: blue;
 }
 /* want my h1 to have the same properties as title page but just a little bit smaller */
 .round {
-  font-size: 8vw; 
+  font-size: 8vw;
 }
 /* sizing the input button so it scales with screen size */
+
 input {
+  
   font-size: 1.5vw;
   width: 18vw;
   height: 3vw;
-margin-bottom: 2vw; 
-margin-top: 2vw; 
+  margin: 1vw;
+ 
+ 
+  
 }
-
+/* .input {padding:1px;} */
+.input{display:inline-block}
 /* color change and zoom animation with hover over categories */
 .box:hover {
   color: red;
@@ -113,7 +136,7 @@ margin-top: 2vw;
 p {
   display: inline;
   color: yellow;
-  margin: 3vw 3vw;
+  margin: 2vw 2vw;
   font-size: 2vw;
   font-weight: bold;
 }
@@ -125,7 +148,9 @@ button.right {
   margin-top: .75vw;
 }
 /* changing margins of button on home oage to have better spacing */
-button.play{margin-top: 30px;}
+button.play {
+  margin-top: 30px;
+}
 
 /* ADD DIV SO THAT BUTTONS AND SCORE STAY IN ONE LINE. EDIT THIS */
 
@@ -139,13 +164,52 @@ button.play{margin-top: 30px;}
   }
 }
 
-/* changing to fit screen
-   @media (max-width: 1000px) { 
-       h1 {
-        font-size: 22px;
-   }
-   h2{
-     font-size:18px;
-   }
-   
-}  */
+/* changing to fit screen */
+@media (max-width: 500px) {
+  h1 {
+    margin: 25px;
+  }
+  h3 {
+    margin-bottom: 20px;
+  }
+  .board {
+    width: 95vw;
+    height: 55vh;
+  }
+  input {
+    margin: 10px;
+    width: 35vw;
+    height: 6vw;
+    font-size: 3vw;
+  }
+  p {
+    font-size: 2.5vw;
+  }
+  button {
+    width: 18vw;
+
+    height: 8vw;
+    font-size: 3.5vw;
+    margin: 0;
+  }
+  .right {
+    width: 26vw;
+  }
+  .box {
+    font-size: 3vw;
+  }
+  .box:hover {
+    font-size: 4.5vw;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 1700px) {
+  .board{
+    padding-bottom: 5vh;
+  }
+}

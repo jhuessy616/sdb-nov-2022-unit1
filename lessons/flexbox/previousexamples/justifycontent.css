@@ -1,0 +1,9 @@
+.container{
+    border:5px solid #ffcc5c;
+    display:flex;
+    justify-content: space-evenly;
+   
+}
+/* flex-start(default), flex-end, center, space-around, space between, space evenly */
+ /* flex-direction: column; */
+/* force a collapse by using flex.  */
