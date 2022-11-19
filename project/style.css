@@ -1,11 +1,10 @@
 /* Setting a background image that is centered and covers entire page. */
-/* @font-face {
-  font-family: "gyparodyregular";
-  src: url("gyparody-webfont.woff2") format("woff2"),
-    url("gyparody-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-} */
+@font-face {
+    font-family: 'jeopardy';
+    src: url('./fonts/webfontkit-20221117-213143/gyparody-webfont.woff')
+}
+
+
 /* !Trying to get the jeopardy font */
 
 body {
@@ -17,7 +16,7 @@ body {
 }
 /* h1 and h3 styling and also adding animation for color change to occuron h1  */
 h1 {
- /* font-family: "gyparodyregular", serif;  */
+
   font-size: 9vw;
   color: white;
   text-align: center;
@@ -52,30 +51,37 @@ button {
 
 /* creating spacing for footer below content set the container to fit the screen */
 #page-container {
-  /* position: relative; */
+  position: relative;
   min-height: 100vh;
 }
 
 #content-wrap {
   margin: auto;
-  padding-bottom: 3rem; 
+  padding-bottom: 5rem; 
+  /* min-height:83vh; */
 }
 
 /* this is the footer text in an h5 */
 h5 {
   text-align: center;
   margin-bottom: 0;
-  padding-top: 1.5rem;
+  /* padding-top: 1vh; */
   font-size: 2vw;
   color: rgb(87, 219, 254);
   
 }
 
+ .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
 
+/* footer{height:3rem;} */
 /* footer background color */
 .footer span {
   background-color: rgba(139, 33, 100, 0.7);
-  padding: 1vw 30vw;
+  padding: 1vh 30vw;
 }
 
 .board {
@@ -87,7 +93,7 @@ h5 {
   /* can do this rather than 1fr, 1fr over and over */
   width: 80vw;
  height: 50vh;
-    padding: 1vw; 
+    padding: 10px; 
     
   /* max-width: 70%; */
   margin: 10px auto;
@@ -121,10 +127,9 @@ input {
   width: 18vw;
   height: 3vw;
   margin: 1vw;
- 
- 
-  
+   
 }
+
 /* .input {padding:1px;} */
 .input{display:inline-block}
 /* color change and zoom animation with hover over categories */
@@ -142,8 +147,11 @@ p {
 }
 
 /* If they want Next round button to the right activate code below if want button centered deactivate */
+.nextround{display:flex;
+justify-content: flex-end;
+}
+
 button.right {
-  float: right;
   margin-right: 5vw;
   margin-top: .75vw;
 }
@@ -152,7 +160,35 @@ button.play {
   margin-top: 30px;
 }
 
-/* ADD DIV SO THAT BUTTONS AND SCORE STAY IN ONE LINE. EDIT THIS */
+/* divs for final page */
+.final-category{
+  margin: 0 20vw;
+  /* border:solid rgb(87, 219, 254); */
+
+  background-color: rgba(139, 33, 100, 0.7);
+  color: rgb(87, 219, 254);
+}
+h2{
+  padding:1vh;
+margin-top: 2vh;
+margin-bottom: 2vh;
+font-family: 'jeopardy';
+font-size: 3.5vw;}
+
+.final-question{ 
+  display:flex;
+ justify-content: center;
+ align-items: center;
+  /* padding:6vw 20vw; */
+  height:20vw ;
+  width:60vw;
+  margin:0 auto;
+  background-image:url("https://www.dropbox.com/s/izc5sevbrbmr6ua/rob.png?raw=1"); background-size: 15%;
+justify-content: center;
+}
+.final-question p{font-size:2.6vw;}
+
+
 
 /* animation color styling */
 @keyframes colorchange {
@@ -164,8 +200,8 @@ button.play {
   }
 }
 
-/* changing to fit screen */
-@media (max-width: 500px) {
+/* changing to fit cell phone screens */
+@media (max-width: 700px) {
   h1 {
     margin: 25px;
   }
@@ -207,9 +243,33 @@ button.play {
     bottom: 0;
     width: 100%;
   }
+  .final-question{
+    width: 90vw;
+    height:40vw;
+    
+  }
+  .final-question p{font-size:4vw ;}
 }
+/* !Want to center on page for phones */
+/* .content-wrap {
+  margin-top: 50%;
+} */
+/* for big monitors to control input spacing */
 @media (min-width: 1700px) {
   .board{
     padding-bottom: 5vh;
   }
 }
+/* for the freaking galazy fold that's super skinny */
+@media (max-width: 300px) {
+  p{
+    font-size: 2vw;
+  }
+  .right{font-size: 3vw;}
+  }
+  /* for landscaped phones */
+  @media (max-height: 600px) {
+ .board{
+  height:auto;
+ }
+  }
