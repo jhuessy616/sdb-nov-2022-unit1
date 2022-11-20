@@ -1,12 +1,10 @@
-/* Setting a background image that is centered and covers entire page. */
+/* Using Jeopardy font */
 @font-face {
-    font-family: 'jeopardy';
-    src: url('./fonts/webfontkit-20221117-213143/gyparody-webfont.woff')
+  font-family: "jeopardy";
+  src: url("./fonts/webfontkit-20221117-213143/gyparody-webfont.woff");
 }
 
-
-/* !Trying to get the jeopardy font */
-
+/* Setting a background image that is centered and covers entire page. */
 body {
   background: url("https://bostonglobe-prod.cdn.arcpublishing.com/resizer/MIwXCEqUwcNl54xRN7nmaRkOUn4=/1440x0/cloudfront-us-east-1.images.arcpublishing.com/bostonglobe/66LUJA7EKIYKB4CPEWV5YK2QBU.jpg");
   background-size: cover;
@@ -16,7 +14,6 @@ body {
 }
 /* h1 and h3 styling and also adding animation for color change to occuron h1  */
 h1 {
-
   font-size: 9vw;
   color: white;
   text-align: center;
@@ -49,58 +46,47 @@ button {
   margin: 10px;
 }
 
-/* creating spacing for footer below content set the container to fit the screen */
-#page-container {
+/* creating spacing for footer below content set the container to fit the screen  Also used to create spacing on */
+.page-container {
   position: relative;
   min-height: 100vh;
 }
 
-#content-wrap {
+.content-wrap {
   margin: auto;
-  padding-bottom: 5rem; 
-  /* min-height:83vh; */
+  padding-bottom: 5rem;
 }
 
 /* this is the footer text in an h5 */
 h5 {
   text-align: center;
   margin-bottom: 0;
-  /* padding-top: 1vh; */
   font-size: 2vw;
   color: rgb(87, 219, 254);
-  
 }
 
- .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 1%;
+}
 
-/* footer{height:3rem;} */
-/* footer background color */
 .footer span {
   background-color: rgba(139, 33, 100, 0.7);
   padding: 1vh 30vw;
 }
 
+/* this is the board/grid for the questions */
 .board {
-  
   display: grid;
   grid-gap: 0.5vw;
   grid-template-columns: repeat(6, 1fr);
-  /* grid-template-rows: repeat(6,1fr); */
   /* can do this rather than 1fr, 1fr over and over */
   width: 80vw;
- height: 50vh;
-    padding: 10px; 
-    
-  /* max-width: 70%; */
+  height: 50vh;
+  padding: 10px;
   margin: 10px auto;
-  /* padding: .1px; */
-  /* padding-bottom: 1vh; */
-
-  
 }
 .box {
   font-size: 2vw;
@@ -122,22 +108,21 @@ h5 {
 /* sizing the input button so it scales with screen size */
 
 input {
-  
   font-size: 1.5vw;
   width: 18vw;
   height: 3vw;
   margin: 1vw;
-   
 }
 
-/* .input {padding:1px;} */
-.input{display:inline-block}
+.input {
+  display: inline-block;
+}
 /* color change and zoom animation with hover over categories */
 .box:hover {
   color: red;
   font-size: 5vh;
 }
-
+/* paragraph settings */
 p {
   display: inline;
   color: yellow;
@@ -146,14 +131,15 @@ p {
   font-weight: bold;
 }
 
-/* If they want Next round button to the right activate code below if want button centered deactivate */
-.nextround{display:flex;
-justify-content: flex-end;
+/* next round button to the right */
+.nextround {
+  display: flex;
+  justify-content: flex-end;
 }
 
 button.right {
   margin-right: 5vw;
-  margin-top: .75vw;
+  margin-top: 0.75vw;
 }
 /* changing margins of button on home oage to have better spacing */
 button.play {
@@ -161,34 +147,33 @@ button.play {
 }
 
 /* divs for final page */
-.final-category{
+.final-category {
   margin: 0 20vw;
-  /* border:solid rgb(87, 219, 254); */
-
   background-color: rgba(139, 33, 100, 0.7);
   color: rgb(87, 219, 254);
 }
-h2{
-  padding:1vh;
-margin-top: 2vh;
-margin-bottom: 2vh;
-font-family: 'jeopardy';
-font-size: 3.5vw;}
-
-.final-question{ 
-  display:flex;
- justify-content: center;
- align-items: center;
-  /* padding:6vw 20vw; */
-  height:20vw ;
-  width:60vw;
-  margin:0 auto;
-  background-image:url("https://www.dropbox.com/s/izc5sevbrbmr6ua/rob.png?raw=1"); background-size: 15%;
-justify-content: center;
+h2 {
+  padding: 1vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  font-family: "jeopardy";
+  font-size: 3.5vw;
 }
-.final-question p{font-size:2.6vw;}
-
-
+/* final question div */
+.final-question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vw;
+  width: 60vw;
+  margin: 0 auto;
+  background-image: url("https://www.dropbox.com/s/izc5sevbrbmr6ua/rob.png?raw=1");
+  background-size: 15%;
+  justify-content: center;
+}
+.final-question p {
+  font-size: 2.6vw;
+}
 
 /* animation color styling */
 @keyframes colorchange {
@@ -243,33 +228,43 @@ justify-content: center;
     bottom: 0;
     width: 100%;
   }
-  .final-question{
+  .final-question {
     width: 90vw;
-    height:40vw;
-    
+    height: 40vw;
   }
-  .final-question p{font-size:4vw ;}
+  .final-question p {
+    font-size: 4vw;
+  }
+  /* center on page on phones first and last page */
+  .index {
+    margin-top: 50%;
+  }
+  .final {
+    margin-top: 30%;
+  }
 }
-/* !Want to center on page for phones */
-/* .content-wrap {
-  margin-top: 50%;
-} */
+
+
+
+
 /* for big monitors to control input spacing */
 @media (min-width: 1700px) {
-  .board{
+  .board {
     padding-bottom: 5vh;
   }
 }
 /* for the freaking galazy fold that's super skinny */
 @media (max-width: 300px) {
-  p{
+  p {
     font-size: 2vw;
   }
-  .right{font-size: 3vw;}
+  .right {
+    font-size: 3vw;
   }
-  /* for landscaped phones */
-  @media (max-height: 600px) {
- .board{
-  height:auto;
- }
+}
+/* for landscaped phones */
+@media (max-height: 600px) {
+  .board {
+    height: auto;
   }
+}
